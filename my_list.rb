@@ -1,6 +1,9 @@
 require_relative './my_enumerable'
 class MyList
- 
+  include MyEnumerable
+  def initialize(*list)
+    @list = list
+  end
 
   def each(&all_elements)
     @list.each(&all_elements)
